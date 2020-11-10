@@ -8,11 +8,11 @@ export class InformacionService {
 
   arrPost: Post[];
 
-  constructor() {
+  constructor() {/* antes de crear el array vacio compruebo si esta en local store */
     this.arrPost = [];
   }
 
-  agregarPost(pNuevoPost) {
+  agregarPost(pNuevoPost) {/* guardo el array de Post en localstore */
     this.arrPost.push(pNuevoPost);
     console.log(pNuevoPost);
 
