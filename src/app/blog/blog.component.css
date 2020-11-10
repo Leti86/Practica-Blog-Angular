@@ -1,0 +1,68 @@
+h3{
+    font-style: italic;
+    font-weight: 700;
+    color: mediumslateblue;
+}
+
+.caja {
+    margin:20px auto 40px auto;	
+    border:1px solid #d9d9d9;
+    height:30px;
+    overflow: hidden;
+    width: 230px;
+    position:relative;
+}
+
+
+.caja select{
+    
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+}
+
+
+    
+
+.post{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+
+}
+
+.card{
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.post img{
+    width: 100%;
+}
+
+
+
+
+
+ 
+
+
+ 
+
+
+    
+ 
+
+
+
+
+
+
+
+
+ 

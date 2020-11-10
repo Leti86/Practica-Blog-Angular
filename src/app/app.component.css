@@ -1,0 +1,33 @@
+h1{
+    font-style: oblique;
+    font-weight: 700;
+    text-align: center;
+    text-decoration-line: underline;
+    color: lightcoral;
+}
+.menu{
+    flex-wrap: wrap;
+    display: flex;
+    
+}
+
+ul.menu li{
+    list-style: none;
+    border: 1px solid lightcoral;
+    padding: 4px;
+    background-color: lightsalmon;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+ul.menu li:hover{
+background-color:transparent;
+}
+
+ul.menu li.activa{
+    background-color: transparent;
+    
+}

@@ -1,0 +1,25 @@
+<h3>Estos son nuestros Posts...</h3>
+<div class="caja">
+    <select (change)="onChange($event)">
+        <option value="todos">Filtra por categoria</option>
+        <option [value]="categoria" *ngFor="let categoria of categorias">
+            {{categoria | titlecase}}
+        </option>
+    </select>
+</div>
+
+<div class="post">
+    <div class="card" style="width: 18rem;" *ngFor="let post of listadoPost">
+        <img [src]="post.imagen" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{post.titulo}}</h5>
+            <p class="card-text">{{post.texto}}</p>
+            <p class="card-text">
+                <small class="text-muted">{{post.autor}}</small>
+                <small class="text-muted">{{post.fecha}}</small>
+            </p>
+            <p class="card-text">{{post.categoria}}</p>
+        </div>
+    </div>
+
+</div>
