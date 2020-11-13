@@ -14,14 +14,14 @@ h3{
 }
 
 
-.caja select{
-    
+.caja select{    
     background: transparent;
     border: none;
     font-size: 14px;
     height: 30px;
     padding: 5px;
     width: 250px;
+    font-weight: 700;
 }
 
 
@@ -30,15 +30,14 @@ h3{
 .post{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-   
+    justify-content: center;    
 
 }
 
 .card{
     margin: 10px;
-    padding: 10px;
-
+    padding: 10px; 
+    background-color: #ecf0f1;
 }
 
 .post img{

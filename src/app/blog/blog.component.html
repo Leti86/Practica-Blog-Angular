@@ -1,6 +1,6 @@
 <div class="caja">
     <select (change)="onChange($event)">
-        <option value="todos">Filtra por categoria</option>
+        <option value="todos">Todas las categorias</option>
         <option [value]="categoria" *ngFor="let categoria of categorias">
             {{categoria | titlecase}}
         </option>
@@ -20,7 +20,7 @@
                 <small class="text-muted">{{post.fecha}}</small>
             </p>
             <p class="card-text">{{post.categoria}}</p>
-            <button class="btn btn-sm btn-danger" (click)="onClick(indice)">Borrar</button>
+            <button class="btn btn-dark" (click)="onClick(indice)">Borrar</button>
         </div>
     </div>
 

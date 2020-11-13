@@ -1,22 +1,27 @@
 *{box-sizing:border-box;}
 
+
+
 form{
-	width:300px;
+	width: 300px;
 	padding:16px;
 	border-radius:10px;
-	margin:auto;
-	background-color:#ccc;
+	margin: 40px;	
 }
 
 form label{
 	width:72px;
 	font-weight:bold;
 	display:inline-block;
+	font-size: x-large;
+	color: white;
 }
 
 form input[type="text"],
+form input[type="date"],
+form input[type="url"],
 form input[type="email"]{
-	width:180px;
+	width: 500px;
 	padding:3px 10px;
 	border:1px solid #f6f6f6;
 	border-radius:3px;
