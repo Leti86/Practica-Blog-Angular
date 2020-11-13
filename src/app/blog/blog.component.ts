@@ -42,4 +42,8 @@ export class BlogComponent implements OnInit {
     }
   }
 
+  onClick(pIndice: number) {
+    this.informacionService.deleteImg(pIndice);
+  }
+
 }

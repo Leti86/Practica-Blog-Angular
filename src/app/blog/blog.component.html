@@ -1,4 +1,3 @@
-<h3>Estos son nuestros Posts...</h3>
 <div class="caja">
     <select (change)="onChange($event)">
         <option value="todos">Filtra por categoria</option>
@@ -9,7 +8,7 @@
 </div>
 
 <div class="post">
-    <div class="card" style="width: 18rem;" *ngFor="let post of listadoPost">
+    <div class="card" style="width: 18rem;" *ngFor="let post of listadoPost; let indice=index">
         <img [src]="post.imagen" class="card-img-top">
         <div class="card-body">
             <h5 class="card-title">{{post.titulo}}</h5>
@@ -21,6 +20,7 @@
                 <small class="text-muted">{{post.fecha}}</small>
             </p>
             <p class="card-text">{{post.categoria}}</p>
+            <button class="btn btn-sm btn-danger" (click)="onClick(indice)">Borrar</button>
         </div>
     </div>
 

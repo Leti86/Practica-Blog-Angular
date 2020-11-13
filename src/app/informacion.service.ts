@@ -9,12 +9,17 @@ export class InformacionService {
   arrPost: Post[];
 
   constructor() {/* antes de crear el array vacio compruebo si esta en local store */
-    this.arrPost = [];
+    if (localStorage.getItem('post')) {
+      this.arrPost = JSON.parse(localStorage.getItem('post'));
+    } else {
+      this.arrPost = [];
+    }
   }
 
   agregarPost(pNuevoPost) {/* guardo el array de Post en localstore */
     this.arrPost.push(pNuevoPost);
     console.log(pNuevoPost);
+    localStorage.setItem('post', JSON.stringify(this.arrPost));
 
   }
 
@@ -48,6 +53,11 @@ export class InformacionService {
       resolve(categorias);
 
     })
+  }
+
+  deleteImg(pIndice: number) {
+    this.arrPost.splice(pIndice, 1);
+    localStorage.setItem('post', JSON.stringify(this.arrPost));
   }
 
 }
