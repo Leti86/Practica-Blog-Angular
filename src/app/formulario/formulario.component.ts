@@ -1,5 +1,6 @@
+import { variable } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { InformacionService } from '../informacion.service';
 
 @Component({
@@ -13,12 +14,24 @@ export class FormularioComponent implements OnInit {
 
   constructor(private informacionService: InformacionService) {
     this.formulario = new FormGroup({
-      titulo: new FormControl(),
-      texto: new FormControl(),
-      autor: new FormControl(),
-      fecha: new FormControl(),
-      categoria: new FormControl(),
-      imagen: new FormControl()
+      titulo: new FormControl('', [
+        Validators.required
+      ]),
+      texto: new FormControl('', [
+        Validators.required
+      ]),
+      autor: new FormControl('', [
+        Validators.required
+      ]),
+      fecha: new FormControl('', [
+        Validators.required
+      ]),
+      categoria: new FormControl('', [
+        Validators.required
+      ]),
+      imagen: new FormControl('', [
+        Validators.required
+      ])
     })
   }
 

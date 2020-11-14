@@ -3,16 +3,47 @@
         <label for="exampleInputEmail1">Título</label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
             formControlName='titulo'>
+        <p class="text-danger"
+            *ngIf="formulario.get('titulo').hasError('required') && formulario.get('titulo').touched">
+            Pon un titulo a tu post
+        </p>
+    </div>
+    <div class="col-8">
         <label for="exampleInputPassword1">Texto</label>
         <input type="text" class="form-control" id="exampleInputPassword1" formControlName='texto'>
+        <p class="text-danger" *ngIf="formulario.get('texto').hasError('required') && formulario.get('texto').touched">
+            Escribe algo relacionado con tu post
+        </p>
+    </div>
+    <div class="col-8">
         <label for="exampleInputPassword1">Autor</label>
         <input type="text" class="form-control" id="exampleInputPassword1" formControlName='autor'>
+        <p class="text-danger" *ngIf="formulario.get('autor').hasError('required') && formulario.get('autor').touched">
+            Necesitamos saber tu nombre
+        </p>
+    </div>
+    <div class="col-8">
         <label for="exampleInputPassword1">Fecha</label>
         <input type="date" class="form-control" id="exampleInputPassword1" formControlName='fecha'>
+        <p class="text-danger" *ngIf="formulario.get('fecha').hasError('required') && formulario.get('fecha').touched">
+            Elija una fecha
+        </p>
+    </div>
+    <div class="col-8">
         <label for="exampleInputPassword1">Categoria</label>
         <input type="text" class="form-control" id="exampleInputPassword1" formControlName='categoria'>
+        <p class="text-danger"
+            *ngIf="formulario.get('categoria').hasError('required') && formulario.get('categoria').touched">
+            Escriba un tipo de categoria
+        </p>
+    </div>
+    <div class="col-8">
         <label for="exampleInputPassword1">Imagen</label>
         <input type="url" class="form-control" id="exampleInputPassword1" formControlName='imagen'>
+        <p class="text-danger"
+            *ngIf="formulario.get('imagen').hasError('required') && formulario.get('imagen').touched">
+            Introduzca una imagen
+        </p>
 
     </div>
     <button type="submit" class="btn btn-dark">Enviar</button>
