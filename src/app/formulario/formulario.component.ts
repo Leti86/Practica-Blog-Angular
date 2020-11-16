@@ -1,6 +1,6 @@
-import { variable } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { InformacionService } from '../informacion.service';
 
 @Component({
@@ -12,7 +12,9 @@ export class FormularioComponent implements OnInit {
 
   formulario: FormGroup;
 
-  constructor(private informacionService: InformacionService) {
+  constructor(
+    private router: Router,
+    private informacionService: InformacionService) {
     this.formulario = new FormGroup({
       titulo: new FormControl('', [
         Validators.required
@@ -41,6 +43,7 @@ export class FormularioComponent implements OnInit {
     console.log(this.formulario.value);
 
     const nuevoPost = this.informacionService.agregarPost(this.formulario.value);
+    this.router.navigate(['/blog']);
     /* console.log(nuevoPost); */
 
 
