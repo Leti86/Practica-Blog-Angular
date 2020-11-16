@@ -1,9 +1,15 @@
+
+.caja{
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSHMMYDWdkD_QbFBvaogBG72zqDTpMGPsPN_g&usqp=CAU) no-repeat center center fixed;
+	background-size: cover
+}
+
 h1{
     font-style: oblique;
     font-weight: 700;
     text-align: center;
     text-decoration-line: underline;
-    color: lightcoral;
+    color: black;
 }
 .menu{
     flex-wrap: wrap;
@@ -13,21 +19,19 @@ h1{
 
 ul.menu li{
     list-style: none;
-    border: 1px solid lightcoral;
-    padding: 4px;
-    background-color: lightsalmon;
+    border: 1px solid whitesmoke;
+    padding: 4px;    
     margin: 5px;
     cursor: pointer;
     border-radius: 30px;
     font-weight: 700;
     padding: 10px;
+    color: white;
 }
 
-ul.menu li:hover{
-background-color:transparent;
-}
 
 ul.menu li.activa{
-    background-color: transparent;
+    background-color: white;
+    color: black;
     
 }
